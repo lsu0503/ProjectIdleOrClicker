@@ -10,7 +10,7 @@ public class PlayerInfoUI : MonoBehaviour
     {
         player = GameManager.Instance.player;
 
-        healthUI.SetGauge(player.status.health);
-        ManaUI.SetGauge(player.status.mana);
+        healthUI.SetGauge(player.status.HealthGauge);
+        ManaUI.SetGauge(player.status.ManaGauge);
     }
 }
