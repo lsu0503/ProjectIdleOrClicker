@@ -1,10 +1,5 @@
 ﻿using UnityEngine;
 
-public interface ICopyable
-{
-    public ICopyable Copy();
-}
-
 public abstract class StatusEffectBase : IDictionaryContentBase
 {
     [SerializeField] private int id;

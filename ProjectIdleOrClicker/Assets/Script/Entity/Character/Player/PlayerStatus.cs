@@ -6,7 +6,8 @@ using UnityEngine;
 public class PlayerStatus : CharacterStatus
 {
     [Header("Player Status")]
-    public SkillSO skill;
+    public PlayerCharacterSO data;
+    public SkillSO skillData;
 
     public float magic;
     public float speed;
@@ -19,7 +20,7 @@ public class PlayerStatus : CharacterStatus
     {
         base.Start();
 
-        ManaGauge = new Gauge(skill.coolTIme, false);
+        ManaGauge = new Gauge(skillData.coolTIme, false);
     }
 
     protected override void FixedUpdate()
