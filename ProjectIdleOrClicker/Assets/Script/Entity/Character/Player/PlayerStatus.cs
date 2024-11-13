@@ -30,7 +30,8 @@ public class PlayerStatus : CharacterStatus
         magic = data.magic;
         speed = data.speed;
 
-        ManaGauge = new Gauge(skillData.coolTIme, false);
+        //ManaGauge = new Gauge(skillData.coolTIme, false);
+        ManaGauge = new Gauge(100.0f, false);
         base.Awake();
 
         GameManager.Instance.playersData.Add(this);

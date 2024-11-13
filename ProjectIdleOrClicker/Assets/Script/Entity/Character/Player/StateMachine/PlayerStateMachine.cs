@@ -16,6 +16,8 @@
         SkillState = new PlayerSkillState(this);
         PositioningState = new PlayerPositioningState(this);
 
+        ChangeState(ProgressingState);
+
         player.TimeCheckEvent += FixedUpdate;
     }
 }

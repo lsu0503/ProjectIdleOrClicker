@@ -8,9 +8,19 @@ public class GameManager : Singleton<GameManager>
     public int money;
     public InventorySystem inventory;
 
-    public EquipmentObj curItem;
+    public EquipmentObj? curItem;
     public int curItemIndex;
     public event Action<bool> OnItemSelected;
+
+    private void Awake()
+    {
+        playersData = new List<PlayerStatus>();
+        money = 0;
+        inventory = new InventorySystem();
+
+        curItem = null;
+        curItemIndex = -1;
+    }
 
     public void ItemSelect(EquipmentObj item, int index)
     {

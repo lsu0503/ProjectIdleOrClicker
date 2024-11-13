@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class InventorySystem : MonoBehaviour
+public class InventorySystem
 {
     public List<EquipmentObj> inventoryList = new List<EquipmentObj>();
     public InventoryUI ui;

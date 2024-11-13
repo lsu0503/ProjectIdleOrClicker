@@ -21,24 +21,28 @@ public abstract class PlayerBaseState : IState
 
     public bool isOnMonster()
     {
-        float distanceFromMonster = Mathf.Abs(player.status.gameObject.transform.position.z - StageManager.Instance.nearestMonsterDistance);
+        return false;
 
-        if(distanceFromMonster <= ConstantCollection.BattleDistance)
-            return true;
+        //float distanceFromMonster = Mathf.Abs(player.status.gameObject.transform.position.z - StageManager.Instance.nearestMonsterDistance);
 
-        else
-            return false;
+        //if(distanceFromMonster <= ConstantCollection.BattleDistance)
+        //    return true;
+
+        //else
+        //    return false;
     }
 
     public bool isOnPosition()
     {
-        Vector3 positionCoordinate = player.status.gameObject.transform.position - StageManager.Instance.CameraTarget.position;
-        Vector3 positionDifference = positionCoordinate - player.position;
+        return false;
 
-        if (positionDifference.magnitude <= ConstantCollection.PlayerPositionThreshold)
-            return true;
+        //Vector3 positionCoordinate = player.status.gameObject.transform.position - StageManager.Instance.CameraTarget.position;
+        //Vector3 positionDifference = positionCoordinate - player.position;
 
-        else
-            return false;
+        //if (positionDifference.magnitude <= ConstantCollection.PlayerPositionThreshold)
+        //    return true;
+
+        //else
+        //    return false;
     }
 }

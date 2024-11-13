@@ -8,7 +8,7 @@ public class InventoryUI : MonoBehaviour
     private List<ItemIconUI> itemUIList = new List<ItemIconUI>();
     private InventorySystem inventory;
 
-    private void Awake()
+    private void Start()
     {
         inventory = GameManager.Instance.inventory;
         inventory.ui = this;

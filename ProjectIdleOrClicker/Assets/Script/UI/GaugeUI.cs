@@ -7,6 +7,11 @@ public class GaugeUI : MonoBehaviour
     private Image gaugeBar;
     private Gauge gauge;
 
+    private void Awake()
+    {
+        gaugeBar = GetComponent<Image>();
+    }
+
     public void SetGauge(Gauge gauge)
     {
         this.gauge = gauge;
