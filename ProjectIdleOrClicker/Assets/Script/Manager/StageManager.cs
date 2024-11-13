@@ -5,7 +5,7 @@ public class StageManager : Singleton<StageManager>
 {
     public Transform CameraTarget;
 
-    public List<Monster> monsters;
+    public List<Monster> monsters = new List<Monster>();
     public float nearestMonsterDistance;
 
     private void FixedUpdate()

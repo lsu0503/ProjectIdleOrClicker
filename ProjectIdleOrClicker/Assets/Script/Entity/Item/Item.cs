@@ -15,6 +15,8 @@ public class Item : MonoBehaviour
 
             else
                 GameManager.Instance.inventory.GetItem(new EquipmentObj(equip, level));
+
+            Destroy(gameObject);
         }
     }
 }

@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     public EquipmentObj? curItem;
     public int curItemIndex;
     public event Action<bool> OnItemSelected;
+    public event Action OnMoneyChanged;
 
     private void Awake()
     {
@@ -20,6 +21,12 @@ public class GameManager : Singleton<GameManager>
 
         curItem = null;
         curItemIndex = -1;
+    }
+
+    public void MoneyChange(int amount)
+    {
+        money += amount;
+        OnMoneyChanged?.Invoke();
     }
 
     public void ItemSelect(EquipmentObj item, int index)

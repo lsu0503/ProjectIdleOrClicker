@@ -13,6 +13,8 @@ public class Player: MonoBehaviour
 
     public event Action<float> TimeCheckEvent;
 
+    public GameObject projObj;
+
     private void Awake()
     {
         status = GetComponent<PlayerStatus>();

@@ -7,4 +7,5 @@ public class UIManager : Singleton<UIManager>
     public GaugeUI bossHealthBar;
     public ItemInfoUI itemInfoUI;
     public GetLog logUI;
+    public MoneyUI moneyUI;
 }

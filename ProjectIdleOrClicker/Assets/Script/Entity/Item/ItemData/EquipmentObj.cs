@@ -32,7 +32,7 @@ public class EquipmentObj
 
     public void UpdateOption()
     {
-        healthMul = baseData.HealthMul * (1.0f + (0.1f * level));
+        healthMul = baseData.HealthMul;
         defenceMul = baseData.DefenceMul * (1.0f + (0.1f * level));
         attackMul = baseData.AttackMul * (1.0f + (0.1f * level));
         magicMul = baseData.MagicMul * (1.0f + (0.1f * level));

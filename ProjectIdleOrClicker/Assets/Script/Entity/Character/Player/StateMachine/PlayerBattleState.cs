@@ -49,7 +49,7 @@ public class PlayerBattleState : PlayerBaseState
 
     private void UseAttack()
     {
-        throw new NotImplementedException();
+        
     }
 
     private void UseSkill()

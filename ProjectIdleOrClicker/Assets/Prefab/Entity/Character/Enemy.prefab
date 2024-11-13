@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 768440911993704346}
   - component: {fileID: 4927439193949260623}
+  - component: {fileID: 6018875857721174428}
+  - component: {fileID: 2936674176760572128}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
@@ -57,6 +59,38 @@ CapsuleCollider:
   m_Height: 0.7
   m_Direction: 1
   m_Center: {x: 0, y: 0.35, z: 0}
+--- !u!114 &6018875857721174428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664839632818286854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826191dbc404f844cb356fb00132459b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: {fileID: 0}
+--- !u!114 &2936674176760572128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664839632818286854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719c2826c1bd3cf4b8994dec433888c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  defence: 0
+  attack: 0
+  MonsterId: 0
+  data: {fileID: 0}
+  difficulty: 0
+  Strength: 0
 --- !u!1 &786428236000244314
 GameObject:
   m_ObjectHideFlags: 0

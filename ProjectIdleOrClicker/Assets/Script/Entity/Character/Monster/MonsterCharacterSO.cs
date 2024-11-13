@@ -11,5 +11,5 @@ public class MonsterCharacterSO : BaseCharacterSO
 {
     [Header("Monster Data")]
     public MONSTERTYPE type;
-
+    public StatusEffectBase[] effect;
 }

@@ -7,7 +7,7 @@ public class MonsterStatus : CharacterStatus
 {
     [Header("Monster Status")]
     [SerializeField] private int MonsterId;
-    private MonsterCharacterSO data;
+    [SerializeField] private MonsterCharacterSO data;
 
     public int difficulty;
     public float Strength;
@@ -16,6 +16,4 @@ public class MonsterStatus : CharacterStatus
     {
         base.Awake();
     }
-
-
 }
