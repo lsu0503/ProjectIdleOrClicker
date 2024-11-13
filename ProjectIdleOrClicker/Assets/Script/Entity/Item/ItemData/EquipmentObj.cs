@@ -2,14 +2,14 @@
 
 public class EquipmentObj
 {
-    private EquipmentSO baseData;
+    public EquipmentSO baseData;
     public int level;
 
     public float healthMul;
     public float defenceMul;
     public float attackMul;
     public float magicMul;
-    public float SpeedMul;
+    public float speedMul;
 
     public PlayerStatus status;
 
@@ -25,7 +25,9 @@ public class EquipmentObj
     {
         level++;
 
+        UnequipAffection();
         UpdateOption();
+        EquipAffection();
     }
 
     public void UpdateOption()
@@ -34,7 +36,7 @@ public class EquipmentObj
         defenceMul = baseData.DefenceMul * (1.0f + (0.1f * level));
         attackMul = baseData.AttackMul * (1.0f + (0.1f * level));
         magicMul = baseData.MagicMul * (1.0f + (0.1f * level));
-        SpeedMul = baseData.SpeedMul;
+        speedMul = baseData.SpeedMul;
     }
 
     public void OnEquip(PlayerStatus status)
@@ -46,7 +48,7 @@ public class EquipmentObj
     public void OnUnequip()
     {
         UnequipAffection();
-        status.UnequipItem(this);
+        this.status = null;
     }
 
     public void EquipAffection()
@@ -55,7 +57,7 @@ public class EquipmentObj
         status.defence *= defenceMul;
         status.attack *= attackMul;
         status.magic *= magicMul;
-        status.speed *= SpeedMul;
+        status.speed *= speedMul;
     }
 
     public void UnequipAffection()
@@ -64,6 +66,6 @@ public class EquipmentObj
         status.defence /= defenceMul;
         status.attack /= attackMul;
         status.magic /= magicMul;
-        status.speed /= SpeedMul;
+        status.speed /= speedMul;
     }
 }

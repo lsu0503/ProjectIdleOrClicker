@@ -18,13 +18,13 @@ public class PlayerSkillState : PlayerBaseState
         SkillTimer = 0.0f;
         isSkillUsed = false;
 
+        animator.SetBool("isMoving", false);
         animator.SetTrigger("SkillUsed");
-        // 애니메이션 관련 코드 추가
     }
 
     public override void Exit()
     {
-        // 애니메이션 관련 코드 추가
+        
     }
 
     public override void FixedUpdate(float _checkTIme)

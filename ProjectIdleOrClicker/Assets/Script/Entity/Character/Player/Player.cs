@@ -7,6 +7,9 @@ public class Player: MonoBehaviour
     public Vector3 position { get; private set; }
     public Rigidbody rigid { get; private set; }
     public Animator animator { get; private set; }
+    public PlayerInfoUI infoUI { get; private set; }
+
+    private PlayerStateMachine stateMachine;
 
     public event Action<float> TimeCheckEvent;
 
@@ -14,7 +17,15 @@ public class Player: MonoBehaviour
     {
         status = GetComponent<PlayerStatus>();
         rigid = GetComponent<Rigidbody>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
+
+        stateMachine = new PlayerStateMachine(this);
+    }
+
+    private void Start()
+    {
+        infoUI = UIManager.Instance.playerCharacterListUI.AddInfoUI(this);
+        animator.runtimeAnimatorController = status.data.animator;
     }
 
     private void FixedUpdate()

@@ -51,6 +51,8 @@ public class ProjectileAffecter : MonoBehaviour
         if (targetStatus == null) return;
 
         targetStatus.GetDamage(data.power);
+
+        Destroy(gameObject);
     }
 
     private void ProjectileHealing(Collider other)
@@ -60,5 +62,7 @@ public class ProjectileAffecter : MonoBehaviour
         if (targetStatus == null) return;
 
         targetStatus.GetHeal(data.power);
+
+        Destroy(gameObject);
     }
 }

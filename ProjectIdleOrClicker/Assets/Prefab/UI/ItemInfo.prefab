@@ -1700,7 +1700,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3061132817133847853}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4031717748043673891}
+        m_TargetAssemblyTypeName: ItemInfoUI, Assembly-CSharp
+        m_MethodName: OnUnequipButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5338546997345136468
 GameObject:
   m_ObjectHideFlags: 0
@@ -2128,7 +2140,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7068871974215616077}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4031717748043673891}
+        m_TargetAssemblyTypeName: ItemInfoUI, Assembly-CSharp
+        m_MethodName: OnEquipButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5647289801621043847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,7 +2233,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 774161805756482374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4031717748043673891}
+        m_TargetAssemblyTypeName: ItemInfoUI, Assembly-CSharp
+        m_MethodName: OnEnchantButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6291316453503925166
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,6 +2484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3543110888170565595}
+  - component: {fileID: 4031717748043673891}
   m_Layer: 5
   m_Name: ItemInfo
   m_TagString: Untagged
@@ -2479,6 +2516,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 445, y: 77}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4031717748043673891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7004584961298980530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c4c93c2e5218241afb99e89adaaefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 1672122903508327156}
+  statusText:
+  - {fileID: 3327557612339680196}
+  - {fileID: 306990331195185866}
+  - {fileID: 5615944798038586570}
+  - {fileID: 6746803587690296621}
+  - {fileID: 3764183130811187762}
+  itemNameText: {fileID: 6744093104473297103}
+  EquipButton: {fileID: 5612239168955131752}
+  UnequipButton: {fileID: 4969681778486434869}
 --- !u!1 &7398547717564041664
 GameObject:
   m_ObjectHideFlags: 0
@@ -3706,6 +3765,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff72f4f9e6c03a543ab44756957f49a7, type: 3}
+--- !u!114 &1672122903508327156 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3920378941433799899, guid: ff72f4f9e6c03a543ab44756957f49a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2401378525127769647}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 409e281080f1f16419cda43913dfcd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3443166416357563152 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1052712664548107583, guid: ff72f4f9e6c03a543ab44756957f49a7,

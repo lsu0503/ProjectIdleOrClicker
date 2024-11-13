@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 1052712664548107583}
   - component: {fileID: 2883864926394942992}
   - component: {fileID: 1106093201356465216}
+  - component: {fileID: 3920378941433799899}
   m_Layer: 5
   m_Name: EquipSlot
   m_TagString: Untagged
@@ -288,6 +289,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 6
+--- !u!114 &3920378941433799899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191398760239828475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 409e281080f1f16419cda43913dfcd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemImg: {fileID: 474960274331697159}
+  levelText: {fileID: 4929224995529593476}
 --- !u!1 &6665767331718993653
 GameObject:
   m_ObjectHideFlags: 0

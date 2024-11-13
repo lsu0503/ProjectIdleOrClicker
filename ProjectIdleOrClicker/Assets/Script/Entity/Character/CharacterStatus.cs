@@ -15,7 +15,7 @@ public class CharacterStatus : MonoBehaviour
     protected List<StatusEffectBase> StatusEffectList = new List<StatusEffectBase>();
     public event Action<float> OnTimePassedEvent;
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         HealthGauge = new Gauge(health, true);
     }

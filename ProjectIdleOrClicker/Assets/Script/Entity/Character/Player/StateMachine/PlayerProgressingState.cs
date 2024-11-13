@@ -14,14 +14,11 @@ public class PlayerProgressingState : PlayerBaseState
     {
         positionCheckTimer = 0.0f;
         animator.SetBool("isMoving", true);
-        // 애니메이션 관련 코드 추가
     }
 
     public override void Exit()
     {
         rigid.velocity = Vector3.zero;
-
-        // 애니메이션 관련 코드 추가
     }
 
     public override void FixedUpdate(float _checkTIme)

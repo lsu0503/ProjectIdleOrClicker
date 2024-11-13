@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 [Serializable]
 public class PlayerStatus : CharacterStatus
@@ -16,11 +18,22 @@ public class PlayerStatus : CharacterStatus
 
     protected List<EquipmentObj> EquipmentList = new List<EquipmentObj>();
 
-    protected override void Start()
+    public event Action<EquipmentObj> OnEquipEvent;
+    public event Action<int> OnUnequipEvent;
+    public event Action<int> OnEnchantEvent;
+
+    protected override void Awake()
     {
-        base.Start();
+        health = data.health;
+        defence = data.defence;
+        attack = data.attack;
+        magic = data.magic;
+        speed = data.speed;
 
         ManaGauge = new Gauge(skillData.coolTIme, false);
+        base.Awake();
+
+        GameManager.Instance.playersData.Add(this);
     }
 
     protected override void FixedUpdate()
@@ -33,14 +46,21 @@ public class PlayerStatus : CharacterStatus
     {
         EquipmentList.Add(equip);
         equip.OnEquip(this);
+
+        OnEquipEvent?.Invoke(equip);
     }
 
-    public void UnequipItem(EquipmentObj equip)
+    public void UnequipItem(int index)
     {
-        int index = EquipmentList.FindIndex(idx => ReferenceEquals(idx, equip));
-
-        if (index == -1) return;
-
+        EquipmentList[index].OnUnequip();
         EquipmentList.RemoveAt(index);
+
+        OnUnequipEvent?.Invoke(index);
+    }
+
+    public void EnchantItem(int index)
+    {
+        EquipmentList[index].EnchantEquipment();
+        OnEnchantEvent?.Invoke(index);
     }
 }
