@@ -12,7 +12,7 @@ public class AutoDestructionUI : MonoBehaviour
 
     private IEnumerator CountToEnd()
     {
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(ConstantCollection.ItemLogDestructionTime);
         DestroyThis();
     }
 

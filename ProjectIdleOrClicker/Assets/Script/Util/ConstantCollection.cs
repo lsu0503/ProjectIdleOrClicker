@@ -16,4 +16,6 @@ public class ConstantCollection
     public const float FieldYLimit = 4.0f;
 
     public const float PlayerProjectileSpeed = 5.0f;
+
+    public const float ItemLogDestructionTime = 3.5f;
 }
